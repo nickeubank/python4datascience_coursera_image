@@ -31,5 +31,7 @@
     "terminal.integrated.inheritEnv": true,
     "python.formatting.provider": "black",
     "editor.bracketPairColorization.enabled": true,
-    "editor.parameterHints.enabled": false
+    "editor.parameterHints.enabled": false,
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "jupyter.collapseCellInputCodeByDefault": false
 }
