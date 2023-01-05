@@ -1,0 +1,43 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "window.menuBarVisibility": "visible",
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.renderControlCharacters": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true,
+        "**/.Trash*": true
+    },
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Default Dark+",
+    "update.enableWindowsBackgroundUpdates": false,
+    "update.mode": "none",
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+    "extensions.ignoreRecommendations": true,
+    "launchButtons": {
+        "reloadButton": null
+    },
+    "rust-client.rustupPath": "/usr/bin/rustup",
+    "liveServer.settings.ChromeDebuggingAttachment": true,
+    "java.debug.settings.console": "internalConsole",
+    "http.proxySupport": "off",
+    "github.gitAuthentication": false,
+    "python.pythonPath": "~/miniconda/bin/python",
+    "terminal.integrated.inheritEnv": true,
+    "python.formatting.provider": "black",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.parameterHints.enabled": false,
+    "jupyter.sendSelectionToInteractiveWindow": false,
+    "jupyter.collapseCellInputCodeByDefault": false,
+    "[python]": {
+        "editor.formatOnSaveMode": "file",
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": true
+    },
+    "task.allowAutomaticTasks.on": "Always"
+}
