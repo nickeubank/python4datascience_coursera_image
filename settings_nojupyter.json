@@ -39,5 +39,6 @@
         "editor.formatOnPaste": false,
         "editor.formatOnSave": true
     },
-    "task.allowAutomaticTasks.on": "Always"
+    "task.allowAutomaticTasks": "on",
+    "code-runner.runInTerminal": true
 }

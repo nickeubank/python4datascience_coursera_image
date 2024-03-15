@@ -38,5 +38,6 @@
         "editor.formatOnSaveMode": "file",
         "editor.formatOnPaste": false,
         "editor.formatOnSave": true
-    }
+    },
+    "code-runner.runInTerminal": true
 }
