@@ -17,7 +17,7 @@ RUN conda init --all
 USER root
 RUN conda init --all
 USER coder
- 
+
 # Replace existing settings
  
 RUN rm "/home/coder/.local/share/code-server/User/settings.json"
