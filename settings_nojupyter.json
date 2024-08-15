@@ -40,5 +40,7 @@
         "editor.formatOnSave": true
     },
     "task.allowAutomaticTasks": "on",
-    "code-runner.runInTerminal": true
+    "code-runner.runInTerminal": true,
+    "python.condaPath": "/home/coder/miniconda/bin/python",
+    "python.defaultInterpreterPath": "/home/coder/miniconda/bin/python"
 }
