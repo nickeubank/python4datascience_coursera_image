@@ -14,7 +14,7 @@ RUN npm run --prefix=$VSCODE_EXTENSIONS/vscode-run-diff package
 RUN cd $VSCODE_EXTENSIONS/vscode-run-diff && npx vsce package
 RUN mv $VSCODE_EXTENSIONS/vscode-run-diff/vscode-run-diff-0.0.1.vsix $VSCODE_EXTENSIONS
 RUN code-server --install-extension $VSCODE_EXTENSIONS/vscode-run-diff-0.0.1.vsix
- 
+
 # Get conda up and running for us
 RUN conda install --quiet --yes -c conda-forge ipykernel jupyter numpy pandas matplotlib pytest altair pytest-mock black
 RUN /home/coder/miniconda/bin/pip install ineqpy
@@ -30,6 +30,5 @@ RUN echo "hello world"
 RUN echo "hello worl2"
 
 RUN rm "/home/coder/.local/share/code-server/User/settings.json"
-RUN wget -q https://raw.githubusercontent.com/nickeubank/python4datascience_vscodesettings/main/settings.json    -O "/home/coder/.local/share/code-server/User/settings.json"
-RUN echo "\nexport PATH=/home/coder/miniconda/bin/:\$PATH" > /home/coder/temp
-RUN cat /home/coder/.bashrc /home/coder/temp  >> .bashrc
+RUN wget -q https://raw.githubusercontent.com/nickeubank/python4datascience_vscodesettings/main/settings.json -O "/home/coder/.local/share/code-server/User/settings.json"
+RUN wget -q https://raw.githubusercontent.com/nickeubank/python4datascience_vscodesettings/main/settings.json -O "/home/coder/.local/share/code-server/Machine/settings.json"
