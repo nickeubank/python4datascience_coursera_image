@@ -1,6 +1,10 @@
 # Jupyter extension that works
-RUN cd /tmp && wget https://open-vsx.org/api/ms-toolsai/jupyter/2021.8.12/file/ms-toolsai.jupyter-2021.8.12.vsix && code-server --force --install-extension ./ms-toolsai.jupyter-2021.8.12.vsix
- 
+RUN cd /tmp && wget https://open-vsx.org/api/ms-toolsai/jupyter/2022.10.110/file/ms-toolsai.jupyter-2022.10.110.vsix && code-server --force --install-extension ./ms-toolsai.jupyter-2022.10.110.vsix
+RUN cd /tmp && wget https://open-vsx.org/api/ms-python/python/2022.18.2/file/ms-python.python-2022.18.2.vsix && code-server --force --install-extension ./ms-python.python-2022.18.2.vsix
+
+# Add empty comment to override caching and re-load settings.
+RUN echo "hello world 42"
+
 # Drew Adds His Autograder
 RUN git clone https://github.com/joyceerhl/vscode-run-diff.git $VSCODE_EXTENSIONS/vscode-run-diff
 RUN cd $VSCODE_EXTENSIONS/vscode-run-diff
@@ -10,8 +14,9 @@ RUN npm run --prefix=$VSCODE_EXTENSIONS/vscode-run-diff package
 RUN cd $VSCODE_EXTENSIONS/vscode-run-diff && npx vsce package
 RUN mv $VSCODE_EXTENSIONS/vscode-run-diff/vscode-run-diff-0.0.1.vsix $VSCODE_EXTENSIONS
 RUN code-server --install-extension $VSCODE_EXTENSIONS/vscode-run-diff-0.0.1.vsix
+ 
 # Get conda up and running for us
-RUN conda install --quiet --yes -c conda-forge jupyter numpy pandas     matplotlib pytest altair pytest-mock black
+RUN conda install --quiet --yes -c conda-forge ipykernel jupyter numpy pandas matplotlib pytest altair pytest-mock black
 RUN /home/coder/miniconda/bin/pip install ineqpy
 RUN conda init --all
 USER root
@@ -19,7 +24,12 @@ RUN conda init --all
 USER coder
 
 # Replace existing settings
- 
+
+# Add empty comment to override caching and re-load settings.
+RUN echo "hello world"
+RUN echo "hello worl2"
+
 RUN rm "/home/coder/.local/share/code-server/User/settings.json"
-RUN wget -q https://raw.githubusercontent.com/nickeubank/python4datascience_vscodesettings/main/settings.json \
-   -O "/home/coder/.local/share/code-server/User/settings.json"
+RUN wget -q https://raw.githubusercontent.com/nickeubank/python4datascience_vscodesettings/main/settings.json    -O "/home/coder/.local/share/code-server/User/settings.json"
+RUN echo "\nexport PATH=/home/coder/miniconda/bin/:\$PATH" > /home/coder/temp
+RUN cat /home/coder/.bashrc /home/coder/temp  >> .bashrc
