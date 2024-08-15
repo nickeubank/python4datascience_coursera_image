@@ -27,7 +27,6 @@
     "java.debug.settings.console": "internalConsole",
     "http.proxySupport": "off",
     "github.gitAuthentication": false,
-    "python.pythonPath": "~/miniconda/bin/python",
     "terminal.integrated.inheritEnv": true,
     "python.formatting.provider": "black",
     "editor.bracketPairColorization.enabled": true,
