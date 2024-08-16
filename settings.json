@@ -32,7 +32,6 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.parameterHints.enabled": false,
     "jupyter.sendSelectionToInteractiveWindow": true,
-    "jupyter.collapseCellInputCodeByDefault": false,
     "[python]": {
         "editor.formatOnSaveMode": "file",
         "editor.formatOnPaste": false,
@@ -46,5 +45,6 @@
     "jupyter.kernels.excludePythonEnvironments": [
         "/bin/python3",
         "/usr/bin/python3"
-    ]
+    ],
+    "python.languageServer": "Pylance"
 }
