@@ -16,7 +16,7 @@ RUN mv $VSCODE_EXTENSIONS/vscode-run-diff/vscode-run-diff-0.0.1.vsix $VSCODE_EXT
 RUN code-server --install-extension $VSCODE_EXTENSIONS/vscode-run-diff-0.0.1.vsix
 
 # Get conda up and running for us
-RUN conda install --quiet --yes -c conda-forge ipykernel jupyter numpy pandas matplotlib pytest altair pytest-mock black
+RUN conda install --quiet --yes -c conda-forge python=3.11 ipykernel jupyter numpy pandas matplotlib pytest altair pytest-mock black
 RUN /home/coder/miniconda/bin/pip install ineqpy
 RUN conda init --all
 USER root
@@ -26,8 +26,7 @@ USER coder
 # Replace existing settings
 
 # Add empty comment to override caching and re-load settings.
-RUN echo "hello world"
-RUN echo "hello worl2"
+RUN echo "Aug 16 2024 at 1:30"
 
 RUN rm "/home/coder/.local/share/code-server/User/settings.json"
 RUN wget -q https://raw.githubusercontent.com/nickeubank/python4datascience_vscodesettings/main/settings.json -O "/home/coder/.local/share/code-server/User/settings.json"
